@@ -1,7 +1,6 @@
 import React, {Component} from 'react';
 import Customer from './components/Customer';
 import './App.css';
-
 const customers = [
 {
   'id': 1,
@@ -34,22 +33,14 @@ class App extends Component {
     return(
       <div>
         {
-          customers.map(c => {
-            return (
-              <Customer
-                key={c.id}
-                id={c.id}
-                image={c.image}
-                name={c.name}
-                birthday={c.birthday}
-                gender={c.gender}
-                job={c.job}
-              />
+          customers.map(c =>{
+            return(
+              <Customer key={c.id}id={c.id}image={c.image}name={c.name}birthday={c.birthday}gender={c.gender}job={c.job}/>
             )
           })
         }
       </div>
-
+  
     );
   }
 }
